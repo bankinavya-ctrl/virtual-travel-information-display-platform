@@ -1,0 +1,212 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual Travel Information Platform</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(120deg,#667eea,#764ba2);
+color:white;
+}
+
+/* navigation */
+
+nav{
+background:black;
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-size:18px;
+}
+
+/* sections */
+
+.section{
+display:none;
+padding:40px;
+text-align:center;
+}
+
+#login{
+display:block;
+}
+
+.box{
+background:rgba(0,0,0,0.4);
+width:300px;
+margin:100px auto;
+padding:20px;
+border-radius:10px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#ff7b00;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.place{
+background:rgba(0,0,0,0.4);
+margin:20px auto;
+padding:20px;
+width:60%;
+border-radius:10px;
+}
+
+.features{
+background:rgba(0,0,0,0.4);
+margin:20px auto;
+padding:20px;
+width:60%;
+border-radius:10px;
+}
+
+</style>
+
+<script>
+
+function login(){
+document.getElementById("login").style.display="none";
+document.getElementById("home").style.display="block";
+}
+
+function showHome(){
+hideAll();
+document.getElementById("home").style.display="block";
+}
+
+function showLogin(){
+hideAll();
+document.getElementById("login").style.display="block";
+}
+
+function showContact(){
+hideAll();
+document.getElementById("contact").style.display="block";
+}
+
+function logout(){
+hideAll();
+document.getElementById("login").style.display="block";
+}
+
+function hideAll(){
+document.getElementById("home").style.display="none";
+document.getElementById("login").style.display="none";
+document.getElementById("contact").style.display="none";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<div>Virtual Travel</div>
+<div>
+<a href="#" onclick="showHome()">Home</a>
+<a href="#" onclick="showLogin()">Login</a>
+<a href="#" onclick="logout()">Logout</a>
+<a href="#" onclick="showContact()">Contact</a>
+</div>
+</nav>
+
+
+<!-- LOGIN PAGE -->
+
+<div id="login" class="section">
+
+<div class="box">
+
+<h2>Login Page</h2>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<br>
+
+<button onclick="login()">Login</button>
+
+</div>
+
+</div>
+
+
+<!-- HOME PAGE -->
+
+<div id="home" class="section">
+
+<h1>Virtual Travel Information</h1>
+
+<div class="features">
+
+<h2>Website Features</h2>
+
+<p>• Explore famous tourist places online</p>
+<p>• Learn about world destinations</p>
+<p>• Travel information and attractions</p>
+<p>• Easy travel planning</p>
+
+</div>
+
+
+<div class="place">
+<h2>Paris</h2>
+<p>Paris is famous for the Eiffel Tower and beautiful architecture.</p>
+</div>
+
+<div class="place">
+<h2>Dubai</h2>
+<p>Dubai is famous for Burj Khalifa, shopping malls and desert safari.</p>
+</div>
+
+<div class="place">
+<h2>Maldives</h2>
+<p>Maldives is known for beaches and luxury resorts.</p>
+</div>
+
+<div class="place">
+<h2>India</h2>
+<p>India has famous places like Taj Mahal, Goa beaches and Kerala.</p>
+</div>
+
+</div>
+
+
+<!-- CONTACT PAGE -->
+
+<div id="contact" class="section">
+
+<h1>Contact Details</h1>
+
+<p>Email: virtualtravel@gmail.com</p>
+
+<p>Phone: 9876543210</p>
+
+<p>Location: India</p>
+
+</div>
+
+</body>
+</html>
+```
